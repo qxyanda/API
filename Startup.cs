@@ -11,6 +11,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using UserContexts.Models;
 
 namespace API
 {
@@ -26,6 +28,10 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //连接 mysql 数据库，添加数据库上下文
+            //services.AddDbContext<UserContext>(options =>
+            //options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddControllers();
                         // 注册Swagger服务
             services.AddSwaggerGen (c => {
