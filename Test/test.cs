@@ -1,22 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 using Users.Entitis;
 using UsersDbContext.Entities;
+using System;
 
-
-namespace UserController.Controllers
+namespace Test
 {
-    [Route("api/[controller]")]
-    public class GetUserInfoController : ControllerBase
+    public class GetUserInfoTest
     {
-        // [HttpGet]
-        // public List<User> Get()
+        // public List<User> Main()
         // {
         //     using (UserDbContext _userContext = new UserDbContext())
         //     {
-        //         Console.WriteLine(_userContext.User);
         //         return _userContext.Set<User>().ToList();
         //     }
         // }

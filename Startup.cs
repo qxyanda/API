@@ -1,18 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Swashbuckle.AspNetCore.Swagger;
-using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using UserContexts.Models;
+using UsersDbContext.Entities;
 
 namespace API
 {
@@ -25,12 +17,17 @@ namespace API
 
         public IConfiguration Configuration { get; }
 
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<UserDbContext>(optionsAction=>
+            // {
+            //     optionsAction.UseMySql("<connection_string>");
+            // }
+            // );
             //连接 mysql 数据库，添加数据库上下文
-            //services.AddDbContext<UserContext>(options =>
-            //options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<UserDbContext>(config => config.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
                         // 注册Swagger服务
