@@ -32,9 +32,9 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests
                 // 添加文档信息
                 c.SwaggerDoc ("v1",
                     new Microsoft.OpenApi.Models.OpenApiInfo {
-                        Title = "智慧电厂.电磁锁控制.NET",
+                        Title = "环形山.NET",
                         Version = "v1",
-                        Description = "Haitong Automatic Control 2020.12.23",
+                        Description = "Crater Tech 2021.1.5",
                         // TermsOfService = new Uri("https://example.com/terms"),
                         // Contact = new OpenApiContact
                         // {
