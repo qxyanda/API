@@ -1,5 +1,4 @@
 ﻿using System;
-using Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Commands;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,22 +18,9 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests
             else
             {
                 var serviceCollection = new ServiceCollection();
-                serviceCollection
-                    .AddLogging(builder =>
-                        builder
-                            .AddConfiguration(AppConfig.Config.GetSection("Logging"))
-                            .AddConsole()
-                    )
-                    .AddSingleton<ICommandRunner, CommandRunner>()
-                    .AddSingleton<IConnectionStringCommand, ConnectionStringCommand>()
-                    .AddSingleton<ITestMigrateCommand, TestMigrateCommand>()
-                    .AddSingleton<ITestPerformanceCommand, TestPerformanceCommand>();
                 Startup.ConfigureEntityFramework(serviceCollection);
                 var serviceProvider = serviceCollection.BuildServiceProvider();
 
-                var commandRunner = serviceProvider.GetService<ICommandRunner>();
-
-                Environment.Exit(commandRunner.Run(args));
             }
         }
 
