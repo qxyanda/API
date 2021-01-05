@@ -32,6 +32,11 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests
         public DbSet<PersonParent> PeopleParents { get; set; }
         public DbSet<PersonFamily> PeopleFamilies { get; set; }
 
+        //Users
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Game> Games { get; set; }
+
+
         // batch
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }

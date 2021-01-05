@@ -32,7 +32,10 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models
 		public int? TeacherId { get; set; }
 
 		public PersonFamily Family { get; set; }
+
+        public int shit { get; set; }
 	}
+
 
 	public class PersonKid : Person
 	{
