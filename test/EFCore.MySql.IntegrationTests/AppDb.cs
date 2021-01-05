@@ -8,8 +8,8 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests
     public class AppDb : IdentityDbContext<AppIdentityUser>
     {
         //Users
-        public DbSet<Admin> Admins { get; set; }
-        public DbSet<Game> Games { get; set; }
+        public DbSet<User> PokerUsers { get; set; }
+        public DbSet<Wallet> Wallets { get; set; }
 
         public AppDb(DbContextOptions options) : base(options)
         {
