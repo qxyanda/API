@@ -1,7 +1,11 @@
+using System;
 using System.Linq;
 using Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ViewModels;
+using Models;
+using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
 {
@@ -19,7 +23,13 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-			return new ObjectResult(_db.PokerUsers.OrderByDescending(m => m.Id).Take(10).ToList());
+            var models = _db.PokerUsers.OrderBy(m => m.Id).Take(10).ToList();
+            List<UserVM> viewModels = new List<UserVM>();
+            foreach( var model in models)
+            {
+                viewModels.Add(new UserVM(model.UserName,model.NickName,model.Session));
+            }
+			return new ObjectResult(viewModels);
         }
 
         // GET api/sync/5
@@ -29,7 +39,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
 			var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
 			if (model != null)
 			{
-				return new ObjectResult(model);
+				return new ObjectResult(new UserVM(model.UserName,model.NickName,model.Session));
 			}
 			return NotFound();
         }
@@ -46,7 +56,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] User body)
         {
-			var model = _db.PokerUsers.Include(m => m.wallets).FirstOrDefault(m => m.Id == id);
+			var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
 			if (model != null)
 			{
 				model.PassWord = body.PassWord;
@@ -60,19 +70,19 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-			var models = _db.Wallets.OrderByDescending(m => m.Id == id);
-			if (models != null)
-			{
-                foreach(var modelOnDeleting in models)
-				_db.Wallets.Remove(modelOnDeleting);
-                var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
-                if (model != null)
+
+            var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
+            if (model != null)
+            {
+                var wallets = _db.Wallets.OrderByDescending(m => m.User.Id == id);
+                foreach(var wallet in wallets)
                 {
-                    _db.PokerUsers.Remove(model);
+                    _db.Wallets.Remove(wallet);
                 }
-				_db.SaveChanges();
-				return Ok();
-			}
+                _db.PokerUsers.Remove(model);
+                _db.SaveChanges();
+                return Ok();
+            }
 
 			return NotFound();
         }
