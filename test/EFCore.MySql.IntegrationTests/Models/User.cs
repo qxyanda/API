@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Models;
+using ViewModels;
 
-namespace Models
+
+namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models
 {
     public static class UsersMeta
 	{
@@ -16,13 +17,10 @@ namespace Models
 		}
 	}
 
-    public class User
+    public class User : UserVM
     {
         public int Id { get; set; }
         public string PassWord { get; set; }
-        public string UserName { get; set; }
-		public string NickName { get; set; }
-        public string Session { get; set; }
     }
 
 }

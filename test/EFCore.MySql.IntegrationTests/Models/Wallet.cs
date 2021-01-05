@@ -1,21 +1,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Models;
 
-namespace Models
+
+namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models
 {
-    public static class WalletsMeta
-	{
-		public static void OnModelCreating(ModelBuilder modelBuilder)
-		{
-            modelBuilder.Entity<Wallet>(entity =>
-			{
-				entity.HasKey(m => m.Id)
-                ;
-            });
-		}
-	}
-
     public class Wallet
     {
         public int Id { get; set; }

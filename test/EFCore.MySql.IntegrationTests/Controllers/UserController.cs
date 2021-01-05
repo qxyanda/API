@@ -1,10 +1,7 @@
-using System;
 using System.Linq;
 using Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ViewModels;
-using Models;
 using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
@@ -24,12 +21,16 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         public IActionResult Get()
         {
             var models = _db.PokerUsers.OrderBy(m => m.Id).Take(10).ToList();
-            List<UserVM> viewModels = new List<UserVM>();
-            foreach( var model in models)
+            if(models != null)
             {
-                viewModels.Add(new UserVM(model.UserName,model.NickName,model.Session));
+                List<UserVM> viewModels = new List<UserVM>();
+                foreach( var model in models)
+                {
+                    viewModels.Add(new UserVM(model.UserName,model.NickName,model.Session));
+                }
+                return new ObjectResult(viewModels);
             }
-			return new ObjectResult(viewModels);
+            return NotFound();
         }
 
         // GET api/sync/5
