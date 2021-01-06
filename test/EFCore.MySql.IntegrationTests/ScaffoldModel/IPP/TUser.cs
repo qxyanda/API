@@ -19,13 +19,14 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string Telephone { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string Level { get; set; }
+        public string AccessCode { get; set; }
         public string Major { get; set; }
         public string Token { get; set; }
         public string TokenUpdated { get; set; }
         public string PcToken { get; set; }
         public string CamId { get; set; }
-        public DateTime? CreateDate { get; set; }
-        public DateTime? UpdateDate { get; set; }
+        public DateTime CreateDate { get; set; }
+        public DateTime UpdateDate { get; set; }
+        public byte IsDeleted { get; set; }
     }
 }

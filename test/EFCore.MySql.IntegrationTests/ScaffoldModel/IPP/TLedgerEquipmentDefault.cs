@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 {
-    public partial class TEquipmentDefault
+    public partial class TLedgerEquipmentDefault
     {
         public int Id { get; set; }
         public string EquipmentName { get; set; }

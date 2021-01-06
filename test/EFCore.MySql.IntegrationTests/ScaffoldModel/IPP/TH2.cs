@@ -5,10 +5,8 @@ using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 {
-    public partial class TToken
+    public partial class TH2
     {
         public int Id { get; set; }
-        public string Token { get; set; }
-        public string UserNum { get; set; }
     }
 }

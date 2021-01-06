@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 {
-    public partial class TOperShiftOrder
+    public partial class TContentJson
     {
         public int Id { get; set; }
-        public string GroupNum { get; set; }
-        public string Shift { get; set; }
-        public string ShiftDate { get; set; }
+        public string ContentJson { get; set; }
         public DateTime? CreateTime { get; set; }
+        public string CreateBy { get; set; }
         public DateTime? UpdateTime { get; set; }
+        public string UpdateBy { get; set; }
     }
 }

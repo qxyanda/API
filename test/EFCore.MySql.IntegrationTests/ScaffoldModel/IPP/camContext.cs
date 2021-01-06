@@ -6,31 +6,36 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 {
-    public partial class baodeContext : DbContext
+    public partial class camContext : DbContext
     {
-        public baodeContext()
+        public camContext()
         {
         }
 
-        public baodeContext(DbContextOptions<baodeContext> options)
+        public camContext(DbContextOptions<camContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<T48> T48s { get; set; }
-        public virtual DbSet<T710> T710s { get; set; }
         public virtual DbSet<TAccessPermission> TAccessPermissions { get; set; }
         public virtual DbSet<TAccessRole> TAccessRoles { get; set; }
         public virtual DbSet<TBillboard> TBillboards { get; set; }
         public virtual DbSet<TBoiler> TBoilers { get; set; }
         public virtual DbSet<TBoilerRepair> TBoilerRepairs { get; set; }
         public virtual DbSet<TCam> TCams { get; set; }
+        public virtual DbSet<TCameraAlarm> TCameraAlarms { get; set; }
+        public virtual DbSet<TCameraInfo> TCameraInfos { get; set; }
         public virtual DbSet<TCheckwork> TCheckworks { get; set; }
         public virtual DbSet<TCoalTask> TCoalTasks { get; set; }
+        public virtual DbSet<TConfirm48> TConfirm48s { get; set; }
+        public virtual DbSet<TConfirm710> TConfirm710s { get; set; }
+        public virtual DbSet<TContentJson> TContentJsons { get; set; }
         public virtual DbSet<TDaily> TDailies { get; set; }
         public virtual DbSet<TDc> TDcs { get; set; }
+        public virtual DbSet<TDcsAlarm> TDcsAlarms { get; set; }
         public virtual DbSet<TDcsAll> TDcsAlls { get; set; }
         public virtual DbSet<TDcsApp> TDcsApps { get; set; }
+        public virtual DbSet<TDefect> TDefects { get; set; }
         public virtual DbSet<TDefectInfo> TDefectInfos { get; set; }
         public virtual DbSet<TDefectRepair> TDefectRepairs { get; set; }
         public virtual DbSet<TDevice> TDevices { get; set; }
@@ -39,12 +44,16 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public virtual DbSet<TElectricswitchingoperation> TElectricswitchingoperations { get; set; }
         public virtual DbSet<TEmergencyRepair> TEmergencyRepairs { get; set; }
         public virtual DbSet<TEquipmentDefault> TEquipmentDefaults { get; set; }
+        public virtual DbSet<TEquipmentInfo> TEquipmentInfos { get; set; }
+        public virtual DbSet<TFault> TFaults { get; set; }
+        public virtual DbSet<TFaultiness> TFaultinesses { get; set; }
         public virtual DbSet<TFirstworkorder> TFirstworkorders { get; set; }
+        public virtual DbSet<TH1> TH1s { get; set; }
+        public virtual DbSet<TH2> TH2s { get; set; }
         public virtual DbSet<THeat> THeats { get; set; }
         public virtual DbSet<THeatEnginE> THeatEnginEs { get; set; }
         public virtual DbSet<THeatEngineB> THeatEngineBs { get; set; }
         public virtual DbSet<THeatPower> THeatPowers { get; set; }
-        public virtual DbSet<TInspectionCatalog3> TInspectionCatalog3s { get; set; }
         public virtual DbSet<TInspectionKk> TInspectionKks { get; set; }
         public virtual DbSet<TInspectionPlan> TInspectionPlans { get; set; }
         public virtual DbSet<TInspectionPosition> TInspectionPositions { get; set; }
@@ -53,6 +62,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public virtual DbSet<TInspectionSystem> TInspectionSystems { get; set; }
         public virtual DbSet<TLedgerAuxiliaryInfo> TLedgerAuxiliaryInfos { get; set; }
         public virtual DbSet<TLedgerDailyMaintain> TLedgerDailyMaintains { get; set; }
+        public virtual DbSet<TLedgerEquipmentDefault> TLedgerEquipmentDefaults { get; set; }
         public virtual DbSet<TLedgerEquipmentInfo> TLedgerEquipmentInfos { get; set; }
         public virtual DbSet<TLedgerMalfunction> TLedgerMalfunctions { get; set; }
         public virtual DbSet<TLedgerOverhaul> TLedgerOverhauls { get; set; }
@@ -60,24 +70,29 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public virtual DbSet<TLedgerRenovation> TLedgerRenovations { get; set; }
         public virtual DbSet<TLedgerSpecialCheck> TLedgerSpecialChecks { get; set; }
         public virtual DbSet<TLimitSpace> TLimitSpaces { get; set; }
+        public virtual DbSet<TLogDefault> TLogDefaults { get; set; }
+        public virtual DbSet<TLogMachinesetLeader> TLogMachinesetLeaders { get; set; }
+        public virtual DbSet<TLogShiftSupervisor> TLogShiftSupervisors { get; set; }
         public virtual DbSet<TMonitorProbeGai> TMonitorProbeGais { get; set; }
         public virtual DbSet<TMotor> TMotors { get; set; }
         public virtual DbSet<TNotify> TNotifies { get; set; }
         public virtual DbSet<TOpenDown> TOpenDowns { get; set; }
-        public virtual DbSet<TOperShiftOrder> TOperShiftOrders { get; set; }
         public virtual DbSet<TOperShiftRecord> TOperShiftRecords { get; set; }
         public virtual DbSet<TOperationTicketPrecontrol> TOperationTicketPrecontrols { get; set; }
         public virtual DbSet<TOrderRecord> TOrderRecords { get; set; }
         public virtual DbSet<TOverallSetting> TOverallSettings { get; set; }
         public virtual DbSet<TPatrolRecord> TPatrolRecords { get; set; }
         public virtual DbSet<TProductSpec> TProductSpecs { get; set; }
+        public virtual DbSet<TRelation> TRelations { get; set; }
         public virtual DbSet<TRiskManage> TRiskManages { get; set; }
         public virtual DbSet<TRiskManageTemp> TRiskManageTemps { get; set; }
         public virtual DbSet<TRiskRepair> TRiskRepairs { get; set; }
         public virtual DbSet<TSafeTechnical> TSafeTechnicals { get; set; }
         public virtual DbSet<TSamplDatum> TSamplData { get; set; }
+        public virtual DbSet<TShiftCheck> TShiftChecks { get; set; }
         public virtual DbSet<TShiftMember> TShiftMembers { get; set; }
         public virtual DbSet<TSmallSpecDatum> TSmallSpecData { get; set; }
+        public virtual DbSet<TSpotCheck> TSpotChecks { get; set; }
         public virtual DbSet<TSpotCheckKk> TSpotCheckKks { get; set; }
         public virtual DbSet<TSpotCheckPlan> TSpotCheckPlans { get; set; }
         public virtual DbSet<TSpotCheckPosition> TSpotCheckPositions { get; set; }
@@ -88,9 +103,9 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public virtual DbSet<TTicket> TTickets { get; set; }
         public virtual DbSet<TTicketSupervise> TTicketSupervises { get; set; }
         public virtual DbSet<TTicketTemplate> TTicketTemplates { get; set; }
-        public virtual DbSet<TToken> TTokens { get; set; }
         public virtual DbSet<TTwoworkorder> TTwoworkorders { get; set; }
         public virtual DbSet<TUser> TUsers { get; set; }
+        public virtual DbSet<TUserManagementPower> TUserManagementPowers { get; set; }
         public virtual DbSet<TValve> TValves { get; set; }
         public virtual DbSet<TWarnCameraGai> TWarnCameraGais { get; set; }
         public virtual DbSet<TWorkorder> TWorkorders { get; set; }
@@ -100,485 +115,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=49.232.51.71;port=8400;database=baode;user=root;password=root;treattinyasboolean=true", Microsoft.EntityFrameworkCore.ServerVersion.FromString("5.7.31-mysql"));
+                optionsBuilder.UseMySql("server=49.232.51.71;port=8400;database=cam;user=root;password=root;treattinyasboolean=true", Microsoft.EntityFrameworkCore.ServerVersion.FromString("5.7.31-mysql"));
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<T48>(entity =>
-            {
-                entity.ToTable("t_4_8");
-
-                entity.HasComment("四点八步确认卡");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-
-                entity.Property(e => e.Charge1Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge1_sign")
-                    .HasComment("工作负责人签名")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Charge2Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge2_sign")
-                    .HasComment("工作负责人签名2")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Charge3Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge3_sign")
-                    .HasComment("工作负责人签字3")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Charge5Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge5_sign")
-                    .HasComment("工作负责人签名")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Charge6Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge6_sign")
-                    .HasComment("工作负责人签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.ChargeN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge_n")
-                    .HasComment("工作负责人")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm1)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm1")
-                    .HasComment("确认为1，没填为0")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm2)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm2")
-                    .HasComment("确认为1，没填为0")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm3)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm3")
-                    .HasComment("任务分配，进度交底")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm4)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm4")
-                    .HasComment("安全技术交底")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm5)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm5")
-                    .HasComment("危险源辨识")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm6)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm6")
-                    .HasComment("现场工器具、施工机具及消防设施检查确认（包括安全带、工器具、脚手架、梯子、灭火器、交叉作业防护网等）")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm7)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm7")
-                    .HasComment("作业过程监督检查")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm8)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm8")
-                    .HasComment("收工检查")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Confirm8ChargeSign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("confirm8_charge_sign")
-                    .HasComment("收工负责人签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Content)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("content")
-                    .HasComment("工作内容")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.CreateBy)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("create_by")
-                    .HasComment("创建人")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.CreateDate)
-                    .HasColumnType("varchar(60)")
-                    .HasColumnName("create_date")
-                    .HasComment("创建时间")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.ExecutionDate)
-                    .HasColumnType("varchar(60)")
-                    .HasColumnName("execution_date")
-                    .HasComment("执行时间")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.GroupChargeSign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("group_charge_sign")
-                    .HasComment("班组负责人确认签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.GroupChargeSign3)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("group_charge_sign3")
-                    .HasComment("班组负责人签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.GroupN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("group_n")
-                    .HasComment("班组负责人")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager1N)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager1_n")
-                    .HasComment("厂级管理人员")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager1Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager1_sign")
-                    .HasComment("厂级签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager2N)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager2_n")
-                    .HasComment("车间管理人员")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager2Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager2_sign")
-                    .HasComment("车间签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager3N)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager3_n")
-                    .HasComment("班组管理人员")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager3Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager3_sign")
-                    .HasComment("班组签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager61Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager61_sign")
-                    .HasComment("厂级管理人员签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager62Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager62_sign")
-                    .HasComment("车间管理人员")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Manager63Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager63_sign")
-                    .HasComment("班组管理人员签字")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Next)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("next")
-                    .HasComment("要推送的下一个人")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.OrderNum)
-                    .HasColumnType("varchar(20)")
-                    .HasColumnName("order_num")
-                    .HasComment("工作票号")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.RiskLevel)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("risk_level")
-                    .HasComment("1高2中3低")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Status)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("status")
-                    .HasComment("当前状态")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Valid)
-                    .HasColumnType("varchar(11)")
-                    .HasColumnName("valid")
-                    .HasDefaultValueSql("'1'")
-                    .HasComment("是否合格")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-            });
-
-            modelBuilder.Entity<T710>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToTable("t_7_10");
-
-                entity.HasComment("运行操作过程“七点十步”管控措施确认卡");
-
-                entity.Property(e => e.ChargeN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("charge_n")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.CreateBy)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("create_by")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.CreateDate)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("create_date")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("varchar(225)")
-                    .HasColumnName("end_date")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.FarGuardianN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("far_guardian_n")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.GuardianN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("guardian_n")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.MainDutyN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("main_duty_n")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.ManagerN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("manager_n")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Next)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("next")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.OperaNum)
-                    .HasColumnType("varchar(11)")
-                    .HasColumnName("opera_num")
-                    .HasComment("操作票号")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.OperatorN)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("operator_n")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S101sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s10_1sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S101signNum)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("s10_1sign_num");
-
-                entity.Property(e => e.S102sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s10_2sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S102signNum)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("s10_2sign_num");
-
-                entity.Property(e => e.S1Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s1_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S2Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s2_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S3Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s3_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S4Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s4_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S51sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s5_1sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S51signNum)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("s5_1sign_num");
-
-                entity.Property(e => e.S52sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s5_2sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S52signNum)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("s5_2sign_num");
-
-                entity.Property(e => e.S61sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s6_1sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S61signNum)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("s6_1sign_num");
-
-                entity.Property(e => e.S62sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s6_2sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S62signNum)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("s6_2sign_num");
-
-                entity.Property(e => e.S7Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s7_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S8Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s8_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.S9Sign)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("s9_sign")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("varchar(225)")
-                    .HasColumnName("start_date")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Status)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("status")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Valid)
-                    .HasColumnType("varchar(11)")
-                    .HasColumnName("valid")
-                    .HasDefaultValueSql("'1'")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.WorkNum)
-                    .HasColumnType("varchar(11)")
-                    .HasColumnName("work_num")
-                    .HasComment("工作票号")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-            });
-
             modelBuilder.Entity<TAccessPermission>(entity =>
             {
                 entity.ToTable("t_access_permission");
@@ -807,6 +349,278 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8_general_ci");
             });
 
+            modelBuilder.Entity<TCameraAlarm>(entity =>
+            {
+                entity.ToTable("t_camera_alarm");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+            });
+
+            modelBuilder.Entity<TCameraInfo>(entity =>
+            {
+                entity.ToTable("t_camera_info");
+
+                entity.HasComment("摄像头信息表");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(5)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Altitude)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("altitude")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CameraIndexCode)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("camera_index_code")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CameraName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("camera_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CameraName3)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("camera_name3")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CameraType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("camera_type");
+
+                entity.Property(e => e.CameraTypeName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("camera_type_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CapabilitySet)
+                    .HasColumnType("varchar(2550)")
+                    .HasColumnName("capability_set")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CapabilitySetName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("capability_set_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChannelNo)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("channel_no")
+                    .HasComment("1普通/2红外")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChannelType)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("channel_type")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChannelTypeName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("channel_type_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("create_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("创建时间");
+
+                entity.Property(e => e.EncodeDevIndexCode)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("encode_dev_index_code")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EncodeDevResourceType)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("encode_dev_resource_type")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EncodeDevResourceTypeName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("encode_dev_resource_type_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.GbIndexCode)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("gb_index_code")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.InstallLocation)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("install_location")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.IntelligentSet)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("intelligent_set")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.IntelligentSetName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("intelligent_set_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.KeyBoardCode)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("key_board_code")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Latitude)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("latitude")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Longitude)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("longitude")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Major)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("major")
+                    .HasComment("专业")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manufacturer)
+                    .HasColumnType("int(1)")
+                    .HasColumnName("manufacturer")
+                    .HasComment("宇视1/海康0");
+
+                entity.Property(e => e.Pixel)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("pixel")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Position)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("position")
+                    .HasComment("位置")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Ptz)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("ptz")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PtzController)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("ptz_controller")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PtzControllerName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("ptz_controller_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PtzName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("ptz_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RecordLocation)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("record_location")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RecordLocationName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("record_location_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Region)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("region")
+                    .HasComment("区域")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RegionIndexCode)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("region_index_code")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Statu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("statu")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.StatusName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("status_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TransType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trans_type");
+
+                entity.Property(e => e.TransTypeName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("trans_type_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TreatyType)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("treaty_type")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TreatyTypeName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("treaty_type_name")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateTime)
+                    .HasColumnType("datetime")
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnName("update_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("更新时间");
+
+                entity.Property(e => e.Viewshed)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("viewshed")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
             modelBuilder.Entity<TCheckwork>(entity =>
             {
                 entity.ToTable("t_checkwork");
@@ -1007,6 +821,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.OrderNum)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("order_num")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.RiskLevel)
                     .HasColumnType("varchar(255)")
                     .HasColumnName("risk_level")
@@ -1028,20 +848,21 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
-                entity.Property(e => e.Status)
+                entity.Property(e => e.Statu)
                     .HasColumnType("varchar(255)")
-                    .HasColumnName("status")
+                    .HasColumnName("statu")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Valid)
                     .HasColumnType("varchar(11)")
                     .HasColumnName("valid")
+                    .HasDefaultValueSql("'1'")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.WorkStandardId)
-                    .HasColumnType("varchar(13000)")
+                    .HasColumnType("text")
                     .HasColumnName("work_standard_id")
                     .HasComment("安全作业标准")
                     .HasCharSet("utf8mb4")
@@ -1053,6 +874,516 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("工作任务")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TConfirm48>(entity =>
+            {
+                entity.ToTable("t_confirm48");
+
+                entity.HasComment("四点八步确认卡");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Charge1Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge1_sign")
+                    .HasComment("工作负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Charge2Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge2_sign")
+                    .HasComment("工作负责人签名2")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Charge3Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge3_sign")
+                    .HasComment("工作负责人签字3")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Charge5Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge5_sign")
+                    .HasComment("工作负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Charge6Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge6_sign")
+                    .HasComment("工作负责人签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChargeN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge_n")
+                    .HasComment("工作负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm1)
+                    .HasColumnType("text")
+                    .HasColumnName("confirm1")
+                    .HasComment("确认为1，没填为0")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm2)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("confirm2")
+                    .HasComment("确认为1，没填为0")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm3)
+                    .HasColumnType("text")
+                    .HasColumnName("confirm3")
+                    .HasComment("任务分配，进度交底")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm4)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("confirm4")
+                    .HasComment("安全技术交底")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm5)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("confirm5")
+                    .HasComment("危险源辨识")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm6)
+                    .HasColumnType("text")
+                    .HasColumnName("confirm6")
+                    .HasComment("现场工器具、施工机具及消防设施检查确认（包括安全带、工器具、脚手架、梯子、灭火器、交叉作业防护网等）")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm7)
+                    .HasColumnType("text")
+                    .HasColumnName("confirm7")
+                    .HasComment("作业过程监督检查")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm8)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("confirm8")
+                    .HasComment("收工检查")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Confirm8ChargeSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("confirm8_charge_sign")
+                    .HasComment("收工负责人签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Content)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("content")
+                    .HasComment("工作内容")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("create_by")
+                    .HasComment("创建人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("varchar(60)")
+                    .HasColumnName("create_date")
+                    .HasComment("创建时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ExecutionDate)
+                    .HasColumnType("varchar(60)")
+                    .HasColumnName("execution_date")
+                    .HasComment("执行时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.GroupChargeSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("group_charge_sign")
+                    .HasComment("班组负责人确认签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.GroupChargeSign3)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("group_charge_sign3")
+                    .HasComment("班组负责人签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.GroupN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("group_n")
+                    .HasComment("班组负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager1N)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager1_n")
+                    .HasComment("厂级管理人员")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager1Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager1_sign")
+                    .HasComment("厂级签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager2N)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager2_n")
+                    .HasComment("车间管理人员")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager2Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager2_sign")
+                    .HasComment("车间签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager3N)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager3_n")
+                    .HasComment("班组管理人员")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager3Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager3_sign")
+                    .HasComment("班组签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager61Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager61_sign")
+                    .HasComment("厂级管理人员签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager62Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager62_sign")
+                    .HasComment("车间管理人员")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manager63Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager63_sign")
+                    .HasComment("班组管理人员签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Next)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("next")
+                    .HasComment("要推送的下一个人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OrderNum)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("order_num")
+                    .HasComment("工作票号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RiskLevel)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("risk_level")
+                    .HasComment("1高2中3低")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Statu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("statu")
+                    .HasComment("当前状态")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Valid)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("valid")
+                    .HasDefaultValueSql("'1'")
+                    .HasComment("是否合格")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TConfirm710>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("t_confirm710");
+
+                entity.HasComment("运行操作过程“七点十步”管控措施确认卡");
+
+                entity.Property(e => e.ChargeN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("charge_n")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("create_by")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("create_date")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("varchar(225)")
+                    .HasColumnName("end_date")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FarGuardianN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("far_guardian_n")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.GuardianN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("guardian_n")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MainDutyN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("main_duty_n")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManagerN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("manager_n")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Next)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("next")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OperaNum)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("opera_num")
+                    .HasComment("操作票号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OperatorN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("operator_n")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S101sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s10_1sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S101signNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("s10_1sign_num");
+
+                entity.Property(e => e.S102sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s10_2sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S102signNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("s10_2sign_num");
+
+                entity.Property(e => e.S1Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s1_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S2Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s2_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S3Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s3_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S4Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s4_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S51sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s5_1sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S51signNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("s5_1sign_num");
+
+                entity.Property(e => e.S52sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s5_2sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S52signNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("s5_2sign_num");
+
+                entity.Property(e => e.S61sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s6_1sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S61signNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("s6_1sign_num");
+
+                entity.Property(e => e.S62sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s6_2sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S62signNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("s6_2sign_num");
+
+                entity.Property(e => e.S7Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s7_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S8Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s8_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.S9Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("s9_sign")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("varchar(225)")
+                    .HasColumnName("start_date")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Statu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("statu")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Valid)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("valid")
+                    .HasDefaultValueSql("'1'")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.WorkNum)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("work_num")
+                    .HasComment("工作票号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TContentJson>(entity =>
+            {
+                entity.ToTable("t_content_json");
+
+                entity.HasComment("内容JSON总表");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ContentJson)
+                    .HasColumnType("text")
+                    .HasColumnName("content_json")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("create_by")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("create_time");
+
+                entity.Property(e => e.UpdateBy)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("update_by")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("update_time");
             });
 
             modelBuilder.Entity<TDaily>(entity =>
@@ -1519,9 +1850,11 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.SysId)
-                    .HasColumnType("int(11)")
+                    .HasColumnType("varchar(11)")
                     .HasColumnName("sys_id")
-                    .HasComment("所属图纸id");
+                    .HasComment("所属图纸id")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.Tp)
                     .HasColumnType("varchar(255)")
@@ -1564,6 +1897,64 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("报警低2限")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
+            });
+
+            modelBuilder.Entity<TDcsAlarm>(entity =>
+            {
+                entity.ToTable("t_dcs_alarm");
+
+                entity.HasComment("DCS 报警信息表");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Ac)
+                    .HasColumnType("int(32)")
+                    .HasColumnName("ac")
+                    .HasComment("报警颜色");
+
+                entity.Property(e => e.Al)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("al")
+                    .HasComment("报警优先级");
+
+                entity.Property(e => e.Av)
+                    .HasColumnType("blob")
+                    .HasColumnName("av")
+                    .HasComment("测点数值");
+
+                entity.Property(e => e.Ds)
+                    .HasColumnType("int(16)")
+                    .HasColumnName("ds")
+                    .HasComment("测点状态");
+
+                entity.Property(e => e.Gn)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("gn")
+                    .HasComment("测点名称，如W3.TEST.AX001")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Rt)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("rt")
+                    .HasComment("测点类型：AX,DX,I2,I4,R8");
+
+                entity.Property(e => e.Ta)
+                    .HasColumnType("datetime")
+                    .HasColumnName("ta")
+                    .HasComment("报警时间");
+
+                entity.Property(e => e.Tf)
+                    .HasColumnType("datetime")
+                    .HasColumnName("tf")
+                    .HasComment("首次报警时间");
+
+                entity.Property(e => e.Tm)
+                    .HasColumnType("datetime")
+                    .HasColumnName("tm")
+                    .HasComment("测点更新时间，从1970-1-1到当前的秒数");
             });
 
             modelBuilder.Entity<TDcsAll>(entity =>
@@ -2058,6 +2449,352 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
+            modelBuilder.Entity<TDefect>(entity =>
+            {
+                entity.ToTable("t_defect");
+
+                entity.HasComment("缺陷单表");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.AcceptDepartment)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("accept_department")
+                    .HasComment("缺陷验收人所在单位/部门")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.AcceptDescription)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("accept_description")
+                    .HasComment("验收意见")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.AcceptHistory)
+                    .HasColumnType("varchar(2550)")
+                    .HasColumnName("accept_history")
+                    .HasComment("验收历史")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.AcceptOp)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("accept_op")
+                    .HasComment("验收选择")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.AcceptTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("accept_time")
+                    .HasComment("验收时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.AcceptorN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("acceptor_n")
+                    .HasComment("缺陷验收人：运行部机长")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.AcceptorSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("acceptor_sign")
+                    .HasComment("验收签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChiefEngineerN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("chief_engineer_n")
+                    .HasComment("总工程师")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DefectDescription)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("defect_description")
+                    .HasComment("缺陷描述")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DefectName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("defect_name")
+                    .HasComment("缺陷种类")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DefectNum)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("defect_num")
+                    .HasComment("缺陷编号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DefectState)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("defect_state")
+                    .HasComment("简略列表状态码")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DefectStatus)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("defect_status")
+                    .HasComment("状态码")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DefectType)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("defect_type")
+                    .HasDefaultValueSql("'99'")
+                    .HasComment("缺陷级别")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DiscoverTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("discover_time")
+                    .HasComment("缺陷发现时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DiscovererGroup)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("discoverer_group")
+                    .HasComment("缺陷发现人所在班组")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DiscovererN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("discoverer_n")
+                    .HasComment("缺陷发现人工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.DiscovererPost)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("discoverer_post")
+                    .HasComment("缺陷发现人岗位身份")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EntrustGroup)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("entrust_group")
+                    .HasComment("消缺负责组")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EntrustList)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("entrust_list")
+                    .HasComment("消缺负责人列表")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EntrustN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("entrust_n")
+                    .HasComment("消缺负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EntrustOp)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("entrust_op")
+                    .HasComment("消缺负责人选择")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EntrustTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("entrust_time")
+                    .HasComment("外委单位负责人确认时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("equipment_id")
+                    .HasComment("设备id");
+
+                entity.Property(e => e.EquipmentName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_name")
+                    .HasComment("设备/系统/区域名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FacilityDirectorN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("facility_director_n")
+                    .HasComment("设备部主任")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FacilityMajorN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("facility_major_n")
+                    .HasComment("设备部分管主任")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FacilityMajorOp)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("facility_major_op")
+                    .HasComment("设备部分管主任选项：同意遗留1不同意0")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FinalRepairN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("final_repair_n")
+                    .HasComment("零类缺陷消缺人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.InstallPosition)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("install_position")
+                    .HasComment("安装位置")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.LiableN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("liable_n")
+                    .HasComment("责任人工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.LiableTime)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("liable_time")
+                    .HasComment("责任人操作时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Major)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("major")
+                    .HasComment("专业")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.MediaList)
+                    .HasColumnType("varchar(2550)")
+                    .HasColumnName("media_list")
+                    .HasComment("缺陷照片/视频list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Model)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("model")
+                    .HasComment("机组号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PushNext)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("push_next")
+                    .HasComment("推送人工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ReceiverGroup)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("receiver_group")
+                    .HasComment("缺陷接收组")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ReceiverList)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("receiver_list")
+                    .HasComment("缺陷可接收人列表")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ReceiverN)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("receiver_n")
+                    .HasComment("缺陷实际接收人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ReceiverOp)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("receiver_op")
+                    .HasComment("缺陷接收选项：驳回-1，接收1，上报0")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ReceiverRemark)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("receiver_remark")
+                    .HasComment("驳回意见")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ReceiverTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("receiver_time")
+                    .HasComment("缺陷接收时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Remark)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("remark")
+                    .HasComment("备注")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RepairDescription)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("repair_description")
+                    .HasComment("处理情况")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RepairEndTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("repair_end_time")
+                    .HasComment("消缺终结时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RepairN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("repair_n")
+                    .HasComment("消缺专责")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RepairSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("repair_sign")
+                    .HasComment("维护专责签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RepairStartTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("repair_start_time")
+                    .HasComment("开始抢修时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
             modelBuilder.Entity<TDefectInfo>(entity =>
             {
                 entity.ToTable("t_defect_info");
@@ -2085,7 +2822,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.Property(e => e.DefectName)
                     .HasColumnType("varchar(255)")
                     .HasColumnName("defect_name")
-                    .HasComment("缺陷名称")
+                    .HasComment("缺陷种类")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -2096,10 +2833,18 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.DefectState)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("defect_state")
+                    .HasComment("简略列表状态码")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.DefectType)
                     .HasColumnType("varchar(8)")
                     .HasColumnName("defect_type")
-                    .HasComment("缺陷类型")
+                    .HasDefaultValueSql("'99'")
+                    .HasComment("缺陷级别")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -2142,6 +2887,13 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnType("int(11)")
                     .HasColumnName("equipment_id")
                     .HasComment("设备id");
+
+                entity.Property(e => e.EquipmentName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_name")
+                    .HasComment("设备/系统/区域名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.FacilityN)
                     .HasColumnType("varchar(8)")
@@ -2220,6 +2972,13 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.InstallPosition)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("install_position")
+                    .HasComment("安装位置")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.LiableDepartment)
                     .HasColumnType("varchar(25)")
                     .HasColumnName("liable_department")
@@ -2234,6 +2993,20 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.LiableTime)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("liable_time")
+                    .HasComment("责任人操作时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Major)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("major")
+                    .HasComment("专业")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.MediaList)
                     .HasColumnType("varchar(5550)")
                     .HasColumnName("media_list")
@@ -2245,6 +3018,13 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnType("varchar(8)")
                     .HasColumnName("medical_n")
                     .HasComment("医务室")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Model)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("model")
+                    .HasComment("机组号")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -2561,7 +3341,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("序号");
 
                 entity.Property(e => e.Filename)
-                    .HasColumnType("varchar(40)")
+                    .HasColumnType("varchar(50)")
                     .HasColumnName("filename")
                     .HasComment("图册名称")
                     .HasCharSet("utf8")
@@ -2589,7 +3369,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.Url)
-                    .HasColumnType("varchar(80)")
+                    .HasColumnType("varchar(200)")
                     .HasColumnName("url")
                     .HasComment("文件地址")
                     .HasCharSet("utf8")
@@ -3067,24 +3847,890 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
             {
                 entity.ToTable("t_equipment_default");
 
-                entity.HasComment("设备技术参数默认值表");
+                entity.HasComment("设备基础台账模板");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("create_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("创建时间");
+
+                entity.Property(e => e.Department)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("department")
+                    .HasComment("所属部门")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentLevel)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_level")
+                    .HasComment("设备级别")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentModel)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_model")
+                    .HasComment("设备型号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentName)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("equipment_name")
+                    .HasComment("设备名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentState)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_state")
+                    .HasComment("设备状态")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentType)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("equipment_type")
+                    .HasComment("设备类型")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.InstallPosition)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("install_position")
+                    .HasComment("安装位置")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.LiableN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("liable_n")
+                    .HasComment("责任人 工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Major)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("major")
+                    .HasComment("专业")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManufactureDate)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("manufacture_date")
+                    .HasComment("出厂日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManufactureSerial)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("manufacture_serial")
+                    .HasComment("出厂编号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manufacturer)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("manufacturer")
+                    .HasComment("制造厂家")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Model)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("model")
+                    .HasComment("机组号：1号机/2号机/共用")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OperateDate)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("operate_date")
+                    .HasComment("投运日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SystemId)
+                    .HasColumnType("int(6)")
+                    .HasColumnName("system_id")
+                    .HasComment("所属系统id");
+
+                entity.Property(e => e.SystemName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("system_name")
+                    .HasComment("所属系统名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TechDataList)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("tech_data_list")
+                    .HasComment("技术资料url list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TechParamList)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("tech_param_list")
+                    .HasComment("设备技术参数 list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateTime)
+                    .HasColumnType("datetime")
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnName("update_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("更新时间");
+            });
+
+            modelBuilder.Entity<TEquipmentInfo>(entity =>
+            {
+                entity.ToTable("t_equipment_info");
+
+                entity.HasComment("设备基础台账");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("create_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("创建时间");
+
+                entity.Property(e => e.Department)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("department")
+                    .HasComment("所属部门")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentLevel)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_level")
+                    .HasComment("设备级别")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentModel)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_model")
+                    .HasComment("设备型号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentName)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("equipment_name")
+                    .HasComment("设备名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentState)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_state")
+                    .HasComment("设备状态")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentType)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("equipment_type")
+                    .HasComment("设备类型")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.InstallPosition)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("install_position")
+                    .HasComment("安装位置")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.KksCode)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("kks_code")
+                    .HasComment("KKS编码")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.LiableN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("liable_n")
+                    .HasComment("责任人 工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Major)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("major")
+                    .HasComment("专业")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManufactureDate)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("manufacture_date")
+                    .HasComment("出厂日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManufactureSerial)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("manufacture_serial")
+                    .HasComment("出厂编号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manufacturer)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("manufacturer")
+                    .HasComment("制造厂家")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Model)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("model")
+                    .HasComment("机组号：1号机/2号机/共用")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OperateDate)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("operate_date")
+                    .HasComment("投运日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Remark)
+                    .HasColumnType("varchar(300)")
+                    .HasColumnName("remark")
+                    .HasComment("备注")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SystemId)
+                    .HasColumnType("int(6)")
+                    .HasColumnName("system_id")
+                    .HasComment("所属系统id");
+
+                entity.Property(e => e.SystemName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("system_name")
+                    .HasComment("所属系统名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TechDataList)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("tech_data_list")
+                    .HasComment("技术资料url list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TechParamList)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("tech_param_list")
+                    .HasComment("设备技术参数 list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateTime)
+                    .HasColumnType("datetime")
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnName("update_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("更新时间");
+            });
+
+            modelBuilder.Entity<TFault>(entity =>
+            {
+                entity.ToTable("t_fault");
+
+                entity.HasComment("故障检修报备信息");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
-                    .ValueGeneratedNever()
                     .HasColumnName("id");
 
-                entity.Property(e => e.DefaultParameter)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("default_parameter")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("create_time")
+                    .HasComment("创建时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
 
-                entity.Property(e => e.Type)
-                    .HasColumnType("varchar(55)")
-                    .HasColumnName("type")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
+                entity.Property(e => e.Description)
+                    .HasColumnType("varchar(200)")
+                    .HasColumnName("description")
+                    .HasComment("故障描述")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EmergencyLevel)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("emergency_level")
+                    .HasComment("紧急程度")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EmpiricalCode)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("empirical_code")
+                    .HasComment("经验代码")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultLevel)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("fault_level")
+                    .HasComment("故障等级")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultType)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("fault_type")
+                    .HasComment("故障类别")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.KksCode)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("kks_code")
+                    .HasComment("故障设备KKS编码")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.OccurTime)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("occur_time")
+                    .HasComment("发生时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.OperatorName)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("operator_name")
+                    .HasComment("操作人")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.OperatorPhone)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("operator_phone")
+                    .HasComment("操作人电话")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Othera)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("othera")
+                    .HasComment("其他a")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Otherb)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("otherb")
+                    .HasComment("其他b")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Otherc)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("otherc")
+                    .HasComment("其他c")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Otherd)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("otherd")
+                    .HasComment("其他d")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Othere)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("othere")
+                    .HasComment("其他e")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.OutsourcingFlag)
+                    .HasColumnType("varchar(2)")
+                    .HasColumnName("outsourcing_flag")
+                    .HasComment("外委维修")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ProcessStatus)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("process_status")
+                    .HasComment("处理状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.RepairStatus)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("repair_status")
+                    .HasComment("报修状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.RepairTeam)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("repair_team")
+                    .HasComment("维修组")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Serial)
+                    .HasColumnType("varchar(40)")
+                    .HasColumnName("serial")
+                    .HasComment("故障编号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.StopFlag)
+                    .HasColumnType("varchar(2)")
+                    .HasColumnName("stop_flag")
+                    .HasComment("是否停机")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+            });
+
+            modelBuilder.Entity<TFaultiness>(entity =>
+            {
+                entity.ToTable("t_faultiness");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(255)")
+                    .HasColumnName("id")
+                    .HasComment("id");
+
+                entity.Property(e => e.AcceptanceComment)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("acceptance_comment")
+                    .HasComment("验收意见")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.AcceptanceDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("acceptance_date")
+                    .HasComment("验收时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.AcceptanceDepartment)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("acceptance_department")
+                    .HasComment("验收单位/部门")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.AcceptorNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("acceptor_num")
+                    .HasComment("验收人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.AcceptorSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("acceptor_sign")
+                    .HasComment("验收人签字")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ChiefEngineerIs0)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("chief_engineer_is_0")
+                    .HasComment("总工程师是否同意0类缺陷")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ChiefEngineerNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("chief_engineer_num")
+                    .HasComment("总工程师工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ChiefEngineerStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("chief_engineer_statu")
+                    .HasComment("总工程师确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Confirmer)
+                    .HasColumnType("varchar(255)")
+                    .HasComment("确认分类人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.CreationDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("creation_date")
+                    .HasComment("创建日期")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.DiscovererNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("discoverer_num")
+                    .HasComment("发现人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Elimination)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("elimination")
+                    .HasComment("缺陷消除情况")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("end_date")
+                    .HasComment("消缺终止日期")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentMIs0)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_M_is_0")
+                    .HasComment("设备部主任是否同意0类缺陷")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentMNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_M_num")
+                    .HasComment("设备部主任工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentMStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_M_statu")
+                    .HasComment("设备部主任确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentSpecialistNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_specialist_num")
+                    .HasComment("设备部专工工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_statu")
+                    .HasComment("设备部确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentVmIs0)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_VM_is_0")
+                    .HasComment("设备部副主任是否同意0类缺陷")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentVmNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_VM_num")
+                    .HasComment("设备部副主任工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EquipmentVmStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_VM_statu")
+                    .HasComment("设备部副主任确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultinessDescription)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("faultiness_description")
+                    .HasComment("缺陷描述")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultinessMajor)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("faultiness_major")
+                    .HasComment("所属专业")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultinessName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("faultiness_name")
+                    .HasComment("缺陷名称")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultinessPosition)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("faultiness_position")
+                    .HasComment("所属区域")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultinessSystem)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("faultiness_system")
+                    .HasComment("所属系统或设备")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FaultinessType)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("faultiness_type")
+                    .HasComment("缺陷类型")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.HeadNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("head_num")
+                    .HasComment("消缺负责人(维护专责)工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.IsRepairOvertime)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("is_repair_overtime")
+                    .HasComment("抢修是否超时")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.IsRushToRepair)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("is_rush_to_repair")
+                    .HasComment("是否抢修")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.MachineUnitNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("machine_unit_num")
+                    .HasComment("机组号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Next)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("next")
+                    .HasComment("推送人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("num")
+                    .HasComment("编号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.OutsourcingNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("outsourcing_num")
+                    .HasComment("外委负责人")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.OutsourcingStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("outsourcing_statu")
+                    .HasComment("外委负责人确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Position)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("position")
+                    .HasComment("所属岗位")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PowerGenerationMNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("power_generation_M_num")
+                    .HasComment("发电部主任工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PowerGenerationMStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("power_generation_M_statu")
+                    .HasComment("发电部主任确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PowerGenerationStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("power_generation_statu")
+                    .HasComment("发电部确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PowerGenerationVmNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("power_generation_VM_num")
+                    .HasComment("发电部副主任工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PowerGenerationVmStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("power_generation_VM_statu")
+                    .HasComment("发电部副主任确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Pushsetting)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("pushsetting")
+                    .HasComment("推送确认设置")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Remark)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("remark")
+                    .HasComment("备注")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.RepairEndDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("repair_end_date")
+                    .HasComment("抢修结束时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.RepairStartDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("repair_start_date")
+                    .HasComment("抢修开始时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.RepairTime)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("repair_time")
+                    .HasComment("抢修计时")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ResponsibleDepartment)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("responsible_department")
+                    .HasComment("责任部门")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.SafetyMNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safety_M_num")
+                    .HasComment("安监部主任工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.SafetyMStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safety_M_statu")
+                    .HasComment("安监部主任确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.SafetyStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safety_statu")
+                    .HasComment("安监部确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.SafetyVmNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safety_VM_num")
+                    .HasComment("安监部副主任工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.SafetyVmStatu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safety_VM_statu")
+                    .HasComment("安监部副主任确认状态")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ShiftleaderDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("shiftleader_date")
+                    .HasComment("值长审核时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ShiftleaderNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("shiftleader_num")
+                    .HasComment("值长工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Statu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("statu")
+                    .HasComment("状态码")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.StatuDescription)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("statu_description")
+                    .HasComment("状态描述")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.TeamOfDiscoverer)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("team_of_discoverer")
+                    .HasComment("发现人所在班组")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Treatment)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("treatment")
+                    .HasComment("处理情况")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.WorkTicketNum)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("work_ticket_num")
+                    .HasComment("对应工作票编号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
             });
 
             modelBuilder.Entity<TFirstworkorder>(entity =>
@@ -3094,6 +4740,19 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .HasColumnName("id");
+
+                entity.Property(e => e.ApprovalEndDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("approval_end_date")
+                    .HasComment("批准结束时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ApprovalStartDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("approval_start_date")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Charge)
                     .HasColumnType("varchar(60)")
@@ -3210,15 +4869,21 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("create_by")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.DayDateJson)
-                    .HasColumnType("varchar(2000)")
+                    .HasColumnType("text")
                     .HasColumnName("day_date_json")
                     .HasComment("每日开关和收工时间")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.DoubleName)
-                    .HasColumnType("varchar(60)")
+                    .HasColumnType("varchar(225)")
                     .HasColumnName("double_name")
                     .HasComment("工作的机组、变配电站名称及设备双重名称")
                     .HasCharSet("utf8mb4")
@@ -3396,6 +5061,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.MediaList)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("media_list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.Next)
                     .HasColumnType("varchar(60)")
                     .HasColumnName("next")
@@ -3403,7 +5074,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Num)
-                    .HasColumnType("varchar(20)")
+                    .HasColumnType("varchar(50)")
                     .HasColumnName("num")
                     .HasComment("编号")
                     .HasCharSet("utf8mb4")
@@ -3430,7 +5101,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Other)
-                    .HasColumnType("varchar(1000)")
+                    .HasColumnType("text")
                     .HasColumnName("other")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
@@ -3496,9 +5167,23 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.SafeMeasureJson)
-                    .HasColumnType("varchar(5000)")
+                    .HasColumnType("text")
                     .HasColumnName("safe_measure_json")
                     .HasComment("安全措施")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ShiftChargeN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("shift_charge_n")
+                    .HasComment("值长")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ShiftChargeSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("shift_charge_sign")
+                    .HasComment("值长签名")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -3585,11 +5270,409 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.WorkTaskJson)
-                    .HasColumnType("varchar(500)")
+                    .HasColumnType("text")
                     .HasColumnName("work_task_json")
                     .HasComment("工作任务")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TH1>(entity =>
+            {
+                entity.ToTable("t_h1");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ApprovalEndDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("approval_end_date")
+                    .HasComment("批准动火结束时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ApprovalStartDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("approval_start_date")
+                    .HasComment("批准动火开始时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CheckConfirm)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("check_confirm")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CheckJson)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("check_json")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CheckN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("check_n")
+                    .HasComment("测定人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChiefEngineer11Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("chief_engineer11_sign")
+                    .HasComment("总工程师")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChiefEngineerN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("chief_engineer_n")
+                    .HasComment("总工程师")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ChiefEngineerSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("chief_engineer_sign")
+                    .HasComment("总工程师签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("create_by")
+                    .HasComment("创建者")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("date")
+                    .HasColumnName("create_date");
+
+                entity.Property(e => e.FireGuardian11Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("fire_guardian11_sign")
+                    .HasComment("消防监护人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FireGuardian12Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("fire_guardian12_sign")
+                    .HasComment("消防监护人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FireGuardianN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("fire_guardian_n")
+                    .HasComment("消防监护人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FireManagerChargeN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("fire_manager_charge_n")
+                    .HasComment("消防管理负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FireManagerChargeSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("fire_manager_charge_sign")
+                    .HasComment("消防管理负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Groups)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("groups")
+                    .HasComment("班组")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkAddress)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_address")
+                    .HasComment("动火地点及设备名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkCharge)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_charge")
+                    .HasComment("动火负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkCharge11Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_charge11_sign")
+                    .HasComment("动火工作负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkCharge12Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_charge12_sign")
+                    .HasComment("动火工作负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkChargeN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_charge_n")
+                    .HasComment("动火工作负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkContent)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_content")
+                    .HasComment("动火工作内容")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkEnd12Date)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_end12_date")
+                    .HasComment("动火工作终结时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkEndDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_end_date")
+                    .HasComment("申请动火结束时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkExecutor)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_executor")
+                    .HasComment("动火执行人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkExecutor11Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_executor11_sign")
+                    .HasComment("动火执行人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkExecutor12Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_executor12_sign")
+                    .HasComment("动火执行人签字")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkExecutorN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_executor_n")
+                    .HasComment("动火执行人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkIssuerN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_issuer_n")
+                    .HasComment("动火工作票签发人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkIssuerSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_issuer_sign")
+                    .HasComment("动火工作票签发人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkMode)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_mode")
+                    .HasComment("动火方式（可填写焊接、切割、打磨、电钻、使用喷灯等）")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkPicture)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_picture")
+                    .HasComment("动火附图说明")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkStartDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_start_date")
+                    .HasComment("申请动火开始时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkUnitCharge11Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_unit_charge11_sign")
+                    .HasComment("动火部门（或单位）负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.HotWorkUnitChargeN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("hot_work_unit_charge_n")
+                    .HasComment(" 动火部门（或单位）负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.IssuerSignDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("issuer_sign_date")
+                    .HasComment("签发日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.MediaList)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("media_list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Next)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("next")
+                    .HasComment("下一个签名人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("varchar(50)")
+                    .HasColumnName("num")
+                    .HasComment("编号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Orther)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("orther")
+                    .HasComment("其他")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Permit11Date)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("permit11_date")
+                    .HasComment("许可动火时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PermitDate)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("permit_date")
+                    .HasComment("许可时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Remark)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("remark")
+                    .HasComment("备注")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RepairSafeMeasure)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("repair_safe_measure")
+                    .HasComment("检修应采取的安全措施")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RunLicensor10Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("run_licensor10_sign")
+                    .HasComment("运行许可人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RunLicensor12Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("run_licensor12_sign")
+                    .HasComment("工作许可人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RunLicensorN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("run_licensor_n")
+                    .HasComment("运行许可人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.RunSafeMeasure)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("run_safe_measure")
+                    .HasComment("运行应采取的安全措施")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SafePersonCheck11Sign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safe_person_check11_sign")
+                    .HasComment("安检部门负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SafePersonCheckN)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safe_person_check_n")
+                    .HasComment("安检部门负责人")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SafePersonCheckSign)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("safe_person_check_sign")
+                    .HasComment("安检部门负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Statu)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("statu")
+                    .HasComment("票流程状态")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TicketType)
+                    .HasColumnType("varchar(10)")
+                    .HasColumnName("ticket_type")
+                    .HasComment("票类型")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Unit)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("unit")
+                    .HasComment("单位")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Valid)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("valid")
+                    .HasDefaultValueSql("'1'")
+                    .HasComment("是否合格")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TH2>(entity =>
+            {
+                entity.ToTable("t_h2");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
             });
 
             modelBuilder.Entity<THeat>(entity =>
@@ -4159,38 +6242,6 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
-            modelBuilder.Entity<TInspectionCatalog3>(entity =>
-            {
-                entity.ToTable("t_inspection_catalog3");
-
-                entity.HasComment("巡检项目汇总表3检查项目表");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(10)")
-                    .HasColumnName("id")
-                    .HasComment("检查项目id");
-
-                entity.Property(e => e.Flag)
-                    .HasColumnType("varchar(5)")
-                    .HasColumnName("flag")
-                    .HasDefaultValueSql("'1'")
-                    .HasComment("该项目是否在使用中'1'是/'0'否")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.InspectionItem)
-                    .HasColumnType("varchar(100)")
-                    .HasColumnName("inspection_item")
-                    .HasComment("检查项目")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.InspectionSystemId)
-                    .HasColumnType("int(10)")
-                    .HasColumnName("inspection_system_id")
-                    .HasComment("检查系统id");
-            });
-
             modelBuilder.Entity<TInspectionKk>(entity =>
             {
                 entity.ToTable("t_inspection_kks");
@@ -4290,6 +6341,13 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnName("id")
                     .HasComment("区域id");
 
+                entity.Property(e => e.Instruction)
+                    .HasColumnType("varchar(1000)")
+                    .HasColumnName("instruction")
+                    .HasComment("区域巡检项目说明")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.Major)
                     .HasColumnType("varchar(5)")
                     .HasColumnName("major")
@@ -4300,7 +6358,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.Property(e => e.Model)
                     .HasColumnType("varchar(3)")
                     .HasColumnName("model")
-                    .HasComment("!号机/2号机/共用")
+                    .HasComment("1号机/2号机/共用")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -4317,6 +6375,8 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.ToTable("t_inspection_record");
 
                 entity.HasComment("巡检记录表");
+
+                entity.HasIndex(e => new { e.Date, e.Period, e.Shift, e.InspectorN, e.PlanId }, "idx");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -4477,6 +6537,8 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
             modelBuilder.Entity<TInspectionStandard>(entity =>
             {
                 entity.ToTable("t_inspection_standard");
+
+                entity.HasComment("巡检标准表");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(7)")
@@ -4675,6 +6737,154 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("备注")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TLedgerEquipmentDefault>(entity =>
+            {
+                entity.ToTable("t_ledger_equipment_default");
+
+                entity.HasComment("设备基础台账模板");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("create_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("创建时间");
+
+                entity.Property(e => e.Department)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("department")
+                    .HasComment("所属部门")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentLevel)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_level")
+                    .HasComment("设备级别")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentModel)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_model")
+                    .HasComment("设备型号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentName)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("equipment_name")
+                    .HasComment("设备名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentState)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("equipment_state")
+                    .HasComment("设备状态")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentType)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("equipment_type")
+                    .HasComment("设备类型")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.InstallPosition)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("install_position")
+                    .HasComment("安装位置")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.LiableN)
+                    .HasColumnType("varchar(8)")
+                    .HasColumnName("liable_n")
+                    .HasComment("责任人 工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Major)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("major")
+                    .HasComment("专业")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManufactureDate)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("manufacture_date")
+                    .HasComment("出厂日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ManufactureSerial)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("manufacture_serial")
+                    .HasComment("出厂编号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Manufacturer)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("manufacturer")
+                    .HasComment("制造厂家")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Model)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("model")
+                    .HasComment("机组号：1号机/2号机/共用")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.OperateDate)
+                    .HasColumnType("varchar(15)")
+                    .HasColumnName("operate_date")
+                    .HasComment("投运日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SystemId)
+                    .HasColumnType("int(6)")
+                    .HasColumnName("system_id")
+                    .HasComment("所属系统id");
+
+                entity.Property(e => e.SystemName)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("system_name")
+                    .HasComment("所属系统名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TechDataList)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("tech_data_list")
+                    .HasComment("技术资料url list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TechParamList)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("tech_param_list")
+                    .HasComment("设备技术参数 list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateTime)
+                    .HasColumnType("datetime")
+                    .ValueGeneratedOnAddOrUpdate()
+                    .HasColumnName("update_time")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                    .HasComment("更新时间");
             });
 
             modelBuilder.Entity<TLedgerEquipmentInfo>(entity =>
@@ -5394,6 +7604,328 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
+            modelBuilder.Entity<TLogDefault>(entity =>
+            {
+                entity.ToTable("t_log_default");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Item)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("item")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.LogFlag)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("log_flag")
+                    .HasComment("值长日志1/机长日志2")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Modular)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("modular")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Title)
+                    .HasColumnType("varchar(55)")
+                    .HasColumnName("title")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
+            modelBuilder.Entity<TLogMachinesetLeader>(entity =>
+            {
+                entity.ToTable("t_log_machineset_leader");
+
+                entity.HasComment("机长日志");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(10)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Conveyor)
+                    .HasColumnType("varchar(4000)")
+                    .HasColumnName("conveyor")
+                    .HasComment("输机运行方式")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("varchar(60)")
+                    .HasColumnName("create_date")
+                    .HasComment("创建时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.DayHandover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("day_handover")
+                    .HasComment("白班交班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.DayTakeover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("day_takeover")
+                    .HasComment("白班接班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ElecConsumption)
+                    .HasColumnType("varchar(1000)")
+                    .HasColumnName("elec_consumption")
+                    .HasComment("厂用电系统运行方式")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EveHandover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("eve_handover")
+                    .HasComment("前夜交班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EveTakeover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("eve_takeover")
+                    .HasComment("前夜接班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.GroundwireNum)
+                    .HasColumnType("varchar(2000)")
+                    .HasColumnName("groundwire_num")
+                    .HasComment("检修设备已封接地刀闸（接地线）编号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.HydrogenOil)
+                    .HasColumnType("varchar(1500)")
+                    .HasColumnName("hydrogen_oil")
+                    .HasComment("补氢量和油箱油位")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.JobNumber)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("job_number")
+                    .HasComment("工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.LateNightHandover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("late_night_handover")
+                    .HasComment("后夜交班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.LateNightTakeover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("late_night_takeover")
+                    .HasComment("后夜接班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Matters)
+                    .HasColumnType("varchar(5000)")
+                    .HasColumnName("matters")
+                    .HasComment("交代事项")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Model)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("model")
+                    .HasComment("机组号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PushNext)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("push_next")
+                    .HasComment("接收人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Records)
+                    .HasColumnType("text")
+                    .HasColumnName("records")
+                    .HasComment("记事")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Signature)
+                    .HasColumnType("varchar(300)")
+                    .HasColumnName("signature")
+                    .HasComment("交接班签字")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.UpdateDate)
+                    .HasColumnType("varchar(60)")
+                    .HasColumnName("update_date")
+                    .HasComment("修改时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+            });
+
+            modelBuilder.Entity<TLogShiftSupervisor>(entity =>
+            {
+                entity.ToTable("t_log_shift_supervisor");
+
+                entity.HasComment("值长日志");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(10)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.AirCompressor)
+                    .HasColumnType("varchar(800)")
+                    .HasColumnName("air_compressor")
+                    .HasComment("空压机系统")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.CirculatingFireWater)
+                    .HasColumnType("varchar(800)")
+                    .HasColumnName("circulating_fire_water")
+                    .HasComment("循环水、消防水系统运行方式")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.CoalWeightIndicators)
+                    .HasColumnType("varchar(200)")
+                    .HasColumnName("coal_weight_indicators")
+                    .HasComment("煤量指标情况")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("varchar(60)")
+                    .HasColumnName("create_date")
+                    .HasComment("创建时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.DayHandover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("day_handover")
+                    .HasComment("白班交班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.DayTakeover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("day_takeover")
+                    .HasComment("白班接班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.DesaltedIndustrialWater)
+                    .HasColumnType("varchar(800)")
+                    .HasColumnName("desalted_industrial_water")
+                    .HasComment("除盐水、工业水系统运行方式")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.ElecConsumption)
+                    .HasColumnType("varchar(2000)")
+                    .HasColumnName("elec_consumption")
+                    .HasComment("厂用电系统运行方式")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EveHandover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("eve_handover")
+                    .HasComment("前夜交班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.EveTakeover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("eve_takeover")
+                    .HasComment("前夜接班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.FiveHundredKv)
+                    .HasColumnType("varchar(1500)")
+                    .HasColumnName("five_hundred_kv")
+                    .HasComment("500kV系统运行方式")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.GroundWire)
+                    .HasColumnType("varchar(30)")
+                    .HasColumnName("ground_wire")
+                    .HasComment("地线装设情况")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.JobNumber)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("job_number")
+                    .HasComment("工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.LateNightHandover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("late_night_handover")
+                    .HasComment("后夜交班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.LateNightTakeover)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("late_night_takeover")
+                    .HasComment("后夜接班人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.MainIndicators)
+                    .HasColumnType("varchar(3000)")
+                    .HasColumnName("main_indicators")
+                    .HasComment("主要指标完成情况")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.PushNext)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("push_next")
+                    .HasComment("接收人工号")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Records)
+                    .HasColumnType("text")
+                    .HasColumnName("records")
+                    .HasComment("记事")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.Signature)
+                    .HasColumnType("varchar(300)")
+                    .HasColumnName("signature")
+                    .HasComment("交接班签字")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.UpdateDate)
+                    .HasColumnType("varchar(60)")
+                    .HasColumnName("update_date")
+                    .HasComment("修改时间")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+            });
+
             modelBuilder.Entity<TMonitorProbeGai>(entity =>
             {
                 entity.ToTable("t_monitor_probe_gai");
@@ -5857,46 +8389,6 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
-            modelBuilder.Entity<TOperShiftOrder>(entity =>
-            {
-                entity.ToTable("t_oper_shift_order");
-
-                entity.HasComment("运行部值班时间安排表");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.CreateTime)
-                    .HasColumnType("datetime")
-                    .HasColumnName("create_time");
-
-                entity.Property(e => e.GroupNum)
-                    .HasColumnType("varchar(25)")
-                    .HasColumnName("group_num")
-                    .HasComment("班组")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.Shift)
-                    .HasColumnType("varchar(25)")
-                    .HasColumnName("shift")
-                    .HasComment("班次")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.ShiftDate)
-                    .HasColumnType("varchar(50)")
-                    .HasColumnName("shift_date")
-                    .HasComment("值班日期")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.UpdateTime)
-                    .HasColumnType("datetime")
-                    .HasColumnName("update_time");
-            });
-
             modelBuilder.Entity<TOperShiftRecord>(entity =>
             {
                 entity.ToTable("t_oper_shift_record");
@@ -5908,7 +8400,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnName("id");
 
                 entity.Property(e => e.AdditionalMembers)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(500)")
                     .HasColumnName("additional_members")
                     .HasComment("机动人员")
                     .HasCharSet("utf8mb4")
@@ -5919,57 +8411,64 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnName("create_time");
 
                 entity.Property(e => e.EndTime)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(50)")
                     .HasColumnName("end_time")
                     .HasComment("结束时间")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.GroupNum)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("group_num")
+                    .HasComment("班组号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.MainMembers)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(1000)")
                     .HasColumnName("main_members")
                     .HasComment("主值班员")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.ModelCharges)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(500)")
                     .HasColumnName("model_charges")
                     .HasComment("机长")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Shift)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(25)")
                     .HasColumnName("shift")
                     .HasComment("班次")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.ShiftCharge)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(300)")
                     .HasColumnName("shift_charge")
                     .HasComment("值长")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.ShiftDate)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(25)")
                     .HasColumnName("shift_date")
                     .HasComment("值班日期")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.StartTime)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(50)")
                     .HasColumnName("start_time")
                     .HasComment("起始时间")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
-                entity.Property(e => e.SubMenbers)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("sub_menbers")
+                entity.Property(e => e.SubMembers)
+                    .HasColumnType("varchar(1000)")
+                    .HasColumnName("sub_members")
                     .HasComment("值班员")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
@@ -6169,6 +8668,13 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("设置名称")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Remark)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("remark")
+                    .HasComment("备注说明")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
             });
 
             modelBuilder.Entity<TPatrolRecord>(entity =>
@@ -6339,6 +8845,43 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
+            modelBuilder.Entity<TRelation>(entity =>
+            {
+                entity.ToTable("t_relation");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EnclosureDate)
+                    .HasColumnType("varchar(40)")
+                    .HasColumnName("enclosure_date")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EnclosureId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("enclosure_id");
+
+                entity.Property(e => e.EnclosureNum)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("enclosure_num")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EnclosureType)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("enclosure_type")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.MainNum)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("main_num")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
             modelBuilder.Entity<TRiskManage>(entity =>
             {
                 entity.ToTable("t_risk_manage");
@@ -6473,7 +9016,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.GroupMemberDivision)
-                    .HasColumnType("varchar(5000)")
+                    .HasColumnType("text")
                     .HasColumnName("group_member_division")
                     .HasComment("班组成员及分工")
                     .HasCharSet("utf8mb4")
@@ -6499,7 +9042,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Sequence)
-                    .HasColumnType("varchar(2000)")
+                    .HasColumnType("text")
                     .HasColumnName("sequence")
                     .HasComment("序列内容")
                     .HasCharSet("utf8mb4")
@@ -6542,6 +9085,115 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnName("id");
             });
 
+            modelBuilder.Entity<TShiftCheck>(entity =>
+            {
+                entity.ToTable("t_shift_check");
+
+                entity.HasComment("人员值班签到表");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ClockEndTime)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("clock_end_time")
+                    .HasComment("规定打卡签退时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ClockStartTime)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("clock_start_time")
+                    .HasComment("规定打卡签到时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("create_by")
+                    .HasComment("值班项创建人的user_id")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateDate)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("create_date")
+                    .HasComment("值班项创建时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.JobNumber)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("job_number")
+                    .HasComment("应打卡人，外键：链接user表id")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ShiftDate)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("shift_date")
+                    .HasComment("打卡日期")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SignEndTime)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("sign_end_time")
+                    .HasComment("员工实际签退时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SignFlag)
+                    .HasColumnType("varchar(4)")
+                    .HasColumnName("sign_flag")
+                    .HasComment("签到次数（应签2次）")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SignPeriod)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("sign_period")
+                    .HasComment("值班打卡，3选1（早中晚）")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SignStartTime)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("sign_start_time")
+                    .HasComment("员工实际签到时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SignType)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("sign_type")
+                    .HasComment("常规vs值班")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SignValid)
+                    .HasColumnType("varchar(2)")
+                    .HasColumnName("sign_valid")
+                    .HasComment("是否考勤，记录常规打卡中是否请假")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateBy)
+                    .HasColumnType("varchar(11)")
+                    .HasColumnName("update_by")
+                    .HasComment("值班项修改修改人的user_id")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateDate)
+                    .HasColumnType("varchar(20)")
+                    .HasColumnName("update_date")
+                    .HasComment("值班项最终修改时间")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
             modelBuilder.Entity<TShiftMember>(entity =>
             {
                 entity.ToTable("t_shift_member");
@@ -6574,13 +9226,6 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnType("varchar(15)")
                     .HasColumnName("job_number")
                     .HasComment("工号")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.ShiftName)
-                    .HasColumnType("varchar(15)")
-                    .HasColumnName("shift_name")
-                    .HasComment("班号")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -6641,6 +9286,76 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
+            modelBuilder.Entity<TSpotCheck>(entity =>
+            {
+                entity.ToTable("t_spot_check");
+
+                entity.HasComment("点检聚合表");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ContentJsonId)
+                    .HasColumnType("int(5)")
+                    .HasColumnName("content_json_id")
+                    .HasComment("点检标准内容");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("create_by")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("create_time");
+
+                entity.Property(e => e.InspectionCycle)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("inspection_cycle")
+                    .HasComment("点检周期 每天/每周/每月")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.InspectorList)
+                    .HasColumnType("varchar(1000)")
+                    .HasColumnName("inspector_list")
+                    .HasComment("点检人员工号list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PositionId)
+                    .HasColumnType("int(5)")
+                    .HasColumnName("position_id")
+                    .HasComment("点检区域id");
+
+                entity.Property(e => e.System)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("system")
+                    .HasComment("点检系统名称")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateBy)
+                    .HasColumnType("varchar(25)")
+                    .HasColumnName("update_by")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UpdateTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("update_time");
+
+                entity.Property(e => e.ValidFlag)
+                    .HasColumnType("varchar(5)")
+                    .HasColumnName("valid_flag")
+                    .HasComment("计划生效 1是/0否")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+            });
+
             modelBuilder.Entity<TSpotCheckKk>(entity =>
             {
                 entity.ToTable("t_spot_check_kks");
@@ -6677,6 +9392,9 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 
                 entity.HasComment("点检计划表");
 
+                entity.HasIndex(e => e.StandardId, "tk_standard")
+                    .IsUnique();
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(7)")
                     .HasColumnName("id")
@@ -6709,7 +9427,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("标准编号");
 
                 entity.Property(e => e.ValidFlag)
-                    .HasColumnType("varchar(4000)")
+                    .HasColumnType("varchar(4)")
                     .HasColumnName("valid_flag")
                     .HasDefaultValueSql("'1'")
                     .HasComment("计划生效 1是/0否")
@@ -6755,6 +9473,8 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.ToTable("t_spot_check_record");
 
                 entity.HasComment("点检记录表");
+
+                entity.HasIndex(e => new { e.Date, e.Period, e.Shift, e.InspectorN, e.PlanId }, "idx");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -6932,6 +9652,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnType("int(7)")
                     .HasColumnName("equipment_id")
                     .HasComment("设备台帐编号");
+
+                entity.Property(e => e.InspectorList)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("inspector_list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.StandardType)
                     .HasColumnType("varchar(10)")
@@ -7328,27 +10054,6 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
             });
 
-            modelBuilder.Entity<TToken>(entity =>
-            {
-                entity.ToTable("t_token");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.Token)
-                    .HasColumnType("varchar(255)")
-                    .HasColumnName("token")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-
-                entity.Property(e => e.UserNum)
-                    .HasColumnType("varchar(11)")
-                    .HasColumnName("user_num")
-                    .HasCharSet("utf8mb4")
-                    .HasCollation("utf8mb4_general_ci");
-            });
-
             modelBuilder.Entity<TTwoworkorder>(entity =>
             {
                 entity.ToTable("t_twoworkorder");
@@ -7377,6 +10082,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasColumnType("varchar(500)")
                     .HasColumnName("charge_sign")
                     .HasComment("工作负责人签名")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.CreateBy)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("create_by")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
@@ -7458,14 +10169,14 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.GroupMembersArray)
-                    .HasColumnType("varchar(3000)")
+                    .HasColumnType("text")
                     .HasColumnName("group_members_array")
                     .HasComment("工作班成员签名")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.GroupMembersNs)
-                    .HasColumnType("varchar(60)")
+                    .HasColumnType("varchar(255)")
                     .HasColumnName("group_members_ns")
                     .HasComment("工作班成员（不包括工作负责人）工号")
                     .HasCharSet("utf8mb4")
@@ -7527,6 +10238,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.MediaList)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("media_list")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.Next)
                     .HasColumnType("varchar(60)")
                     .HasColumnName("next")
@@ -7535,7 +10252,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.Num)
-                    .HasColumnType("varchar(11)")
+                    .HasColumnType("varchar(50)")
                     .HasColumnName("num")
                     .HasComment("工作票编号")
                     .HasCharSet("utf8mb4")
@@ -7577,15 +10294,22 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
+                entity.Property(e => e.RelationId)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("relation_id")
+                    .HasComment("关联附件id")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
                 entity.Property(e => e.Remark)
-                    .HasColumnType("varchar(1000)")
+                    .HasColumnType("text")
                     .HasColumnName("remark")
                     .HasComment("备注")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.SafeMeasureList)
-                    .HasColumnType("varchar(2000)")
+                    .HasColumnType("text")
                     .HasColumnName("safe_measure_list")
                     .HasComment("注意事项（安全措施）：应注意的事项及采取的安全措施")
                     .HasCharSet("utf8mb4")
@@ -7615,14 +10339,14 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.WorkRetainList)
-                    .HasColumnType("varchar(2000)")
+                    .HasColumnType("text")
                     .HasColumnName("work_retain_list")
                     .HasComment("工作条件（停电或不停电，或邻近及保留带电设备名称）")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_general_ci");
 
                 entity.Property(e => e.WorkTaskJson)
-                    .HasColumnType("varchar(2000)")
+                    .HasColumnType("text")
                     .HasColumnName("work_task_json")
                     .HasComment("工作任务")
                     .HasCharSet("utf8mb4")
@@ -7635,9 +10359,19 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 
                 entity.HasComment("员工表");
 
+                entity.HasIndex(e => e.JobNumber, "tk_jn")
+                    .IsUnique();
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .HasColumnName("id");
+
+                entity.Property(e => e.AccessCode)
+                    .HasColumnType("varchar(100)")
+                    .HasColumnName("access_code")
+                    .HasComment("权限")
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.CamId)
                     .HasColumnType("varchar(100)")
@@ -7648,6 +10382,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.Property(e => e.CreateDate)
                     .HasColumnType("datetime")
                     .HasColumnName("create_date")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
                     .HasComment("创建日期");
 
                 entity.Property(e => e.Department)
@@ -7665,11 +10400,16 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.Initials)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(5)")
                     .HasColumnName("initials")
                     .HasComment("首字母")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
+
+                entity.Property(e => e.IsDeleted)
+                    .HasColumnType("tinyint(1) unsigned")
+                    .HasColumnName("is_deleted")
+                    .HasComment("1 删除 / 0 未删除");
 
                 entity.Property(e => e.JobNumber)
                     .HasColumnType("varchar(10)")
@@ -7678,16 +10418,10 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
 
-                entity.Property(e => e.Level)
-                    .HasColumnType("varchar(100)")
-                    .HasColumnName("level")
-                    .HasComment("权限")
-                    .HasCharSet("utf8")
-                    .HasCollation("utf8_general_ci");
-
                 entity.Property(e => e.Major)
                     .HasColumnType("varchar(50)")
                     .HasColumnName("major")
+                    .HasDefaultValueSql("'NIL'")
                     .HasComment("专业")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
@@ -7709,7 +10443,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.Property(e => e.PcToken)
                     .HasColumnType("varchar(100)")
                     .HasColumnName("pc_token")
-                    .HasComment("pc token")
+                    .HasComment("PC token")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
 
@@ -7721,7 +10455,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.PinYin)
-                    .HasColumnType("varchar(255)")
+                    .HasColumnType("varchar(30)")
                     .HasColumnName("pin_yin")
                     .HasComment("拼音")
                     .HasCharSet("utf8")
@@ -7744,20 +10478,22 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                 entity.Property(e => e.Token)
                     .HasColumnType("varchar(100)")
                     .HasColumnName("token")
-                    .HasComment("an token")
+                    .HasComment("安卓 token")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.TokenUpdated)
                     .HasColumnType("varchar(50)")
                     .HasColumnName("token_updated")
-                    .HasComment("an token上次刷新时间")
+                    .HasComment("安卓 token 上次刷新时间")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
 
                 entity.Property(e => e.UpdateDate)
-                    .HasColumnType("datetime")
+                    .HasColumnType("timestamp")
+                    .ValueGeneratedOnAddOrUpdate()
                     .HasColumnName("update_date")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP")
                     .HasComment("更新日期");
 
                 entity.Property(e => e.UserName)
@@ -7766,6 +10502,114 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
                     .HasComment("用户名")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
+            });
+
+            modelBuilder.Entity<TUserManagementPower>(entity =>
+            {
+                entity.ToTable("t_user_management_power");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(10)")
+                    .HasColumnName("id")
+                    .HasComment("id");
+
+                entity.Property(e => e.DigitalFileQuery)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("digital_file_query")
+                    .HasComment("数字档案查询")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.EquipmentInspection)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("equipment_inspection")
+                    .HasComment("设备巡检")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.FaultDefectManagement)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("Fault_defect_management")
+                    .HasComment("故障缺陷管理")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.IntelligentSecurityPrediction)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("Intelligent_security_prediction")
+                    .HasComment("智能安全预测系统")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ModelFlag)
+                    .HasColumnType("varchar(10)")
+                    .HasColumnName("model_flag")
+                    .HasComment("模板标志")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("varchar(10)")
+                    .HasColumnName("num")
+                    .HasComment("工号")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.PersonnelPositionManagement)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("personnel_position_management")
+                    .HasComment("人员岗位管理(不包括生成签到二维码)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.ProductionInformationQuery)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("production_information_query")
+                    .HasComment("生产信息综合查询")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.QrcodeManagement)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("qrcode_management")
+                    .HasComment("二维码管理")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.SigninCodeManagement)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("signin_code_management")
+                    .HasComment("签到二维码管理")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.TicketSystem)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("ticket_system")
+                    .HasComment("两票系统")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UserManagement)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("user_management")
+                    .HasComment("用户管理")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.UserManagementPower)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("user_management_power")
+                    .HasComment("用户权限管理(用不到)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
+
+                entity.Property(e => e.VideoQuery)
+                    .HasColumnType("varchar(255)")
+                    .HasColumnName("video_query")
+                    .HasComment("视频查询(用不到)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_general_ci");
             });
 
             modelBuilder.Entity<TValve>(entity =>

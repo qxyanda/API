@@ -42,9 +42,12 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string EndLicensorSign { get; set; }
         public string EndLicensorDate { get; set; }
         public string Remark { get; set; }
+        public string RelationId { get; set; }
+        public string MediaList { get; set; }
         public string Statu { get; set; }
         public string Valid { get; set; }
         public string Next { get; set; }
         public string Quality { get; set; }
+        public string CreateBy { get; set; }
     }
 }

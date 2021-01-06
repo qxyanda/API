@@ -16,7 +16,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string Kr { get; set; }
         public string Gn { get; set; }
         public string Eu { get; set; }
-        public int? SysId { get; set; }
+        public string SysId { get; set; }
         public string Sg { get; set; }
         public string Ud { get; set; }
         public string Fq { get; set; }

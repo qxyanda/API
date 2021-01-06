@@ -11,6 +11,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public int? EquipmentId { get; set; }
         public string StandardType { get; set; }
         public string ContentJson { get; set; }
+        public string InspectorList { get; set; }
         public string ValidFlag { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string IssuerN { get; set; }
         public string WorkGroupN { get; set; }
         public string GuardianN { get; set; }
+        public string ShiftChargeN { get; set; }
         public string Unit { get; set; }
         public string Num { get; set; }
         public string Charge { get; set; }
@@ -26,6 +27,9 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string PlanEndDate { get; set; }
         public string SafeMeasureJson { get; set; }
         public string WorkRetainJson { get; set; }
+        public string ApprovalStartDate { get; set; }
+        public string ApprovalEndDate { get; set; }
+        public string ShiftChargeSign { get; set; }
         public string SupplementRetainJson { get; set; }
         public string Issuer6Sign { get; set; }
         public string Issuer6Num { get; set; }
@@ -78,9 +82,11 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string RemarkGuardian { get; set; }
         public string RemarkContent { get; set; }
         public string Other { get; set; }
+        public string MediaList { get; set; }
         public string Statu { get; set; }
         public string RelationId { get; set; }
         public string Next { get; set; }
         public string Valid { get; set; }
+        public string CreateBy { get; set; }
     }
 }

@@ -5,9 +5,10 @@ using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 {
-    public partial class TEquipmentDefault
+    public partial class TEquipmentInfo
     {
         public int Id { get; set; }
+        public string KksCode { get; set; }
         public string EquipmentName { get; set; }
         public string Model { get; set; }
         public string EquipmentState { get; set; }
@@ -26,6 +27,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string Department { get; set; }
         public string TechParamList { get; set; }
         public string TechDataList { get; set; }
+        public string Remark { get; set; }
         public DateTime? CreateTime { get; set; }
         public DateTime? UpdateTime { get; set; }
     }

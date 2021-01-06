@@ -11,5 +11,6 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string Position { get; set; }
         public string Major { get; set; }
         public string Model { get; set; }
+        public string Instruction { get; set; }
     }
 }

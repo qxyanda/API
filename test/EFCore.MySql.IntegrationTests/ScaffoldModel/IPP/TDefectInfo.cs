@@ -12,6 +12,10 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string DiscovererGroup { get; set; }
         public string DiscovererPost { get; set; }
         public int? EquipmentId { get; set; }
+        public string Model { get; set; }
+        public string Major { get; set; }
+        public string InstallPosition { get; set; }
+        public string EquipmentName { get; set; }
         public string DefectNum { get; set; }
         public string DiscoverTime { get; set; }
         public string DefectName { get; set; }
@@ -19,6 +23,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string DefectDescription { get; set; }
         public string LiableN { get; set; }
         public string LiableDepartment { get; set; }
+        public string LiableTime { get; set; }
         public string DefectType { get; set; }
         public string GenerateViceN { get; set; }
         public string FacilityViceN { get; set; }
@@ -42,6 +47,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string RepairCount { get; set; }
         public string FinalAcceptTime { get; set; }
         public string Statu { get; set; }
+        public string DefectState { get; set; }
         public string PushNext { get; set; }
     }
 }

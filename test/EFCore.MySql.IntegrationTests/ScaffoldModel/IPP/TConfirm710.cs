@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
 {
-    public partial class T710
+    public partial class TConfirm710
     {
         public int? Id { get; set; }
         public string MainDutyN { get; set; }
@@ -39,7 +39,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         public string EndDate { get; set; }
         public string CreateBy { get; set; }
         public string CreateDate { get; set; }
-        public string Status { get; set; }
+        public string Statu { get; set; }
         public string Valid { get; set; }
         public string Next { get; set; }
     }
