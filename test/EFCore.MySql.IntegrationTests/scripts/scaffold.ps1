@@ -7,7 +7,7 @@ try
   dotnet tool restore;
 
   $targetDirectoryName = "Scaffold"
-  $tables = 'DataTypesSimple', 'DataTypesVariable'
+  $tables = 'pokerusers', 'wallets'
 
   Remove-Item -Recurse -Force $targetDirectoryName -ErrorAction Ignore
   mkdir $targetDirectoryName
