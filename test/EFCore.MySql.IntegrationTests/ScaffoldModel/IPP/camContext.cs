@@ -114,7 +114,7 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.ScaffoldModel
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseMySql("server=49.232.51.71;port=8400;database=cam;user=root;password=root;treattinyasboolean=true", Microsoft.EntityFrameworkCore.ServerVersion.FromString("5.7.31-mysql"));
             }
         }
