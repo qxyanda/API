@@ -3,15 +3,16 @@ using Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models;
 using Microsoft.AspNetCore.Mvc;
 using ViewModels;
 using System.Collections.Generic;
+using System;
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
 {
     [Route("api/[controller]")]
-    public class UserController : Controller
+    public class PersonController : Controller
     {
 	    private readonly AppDb _db;
 
-	    public UserController(AppDb db)
+	    public PersonController(AppDb db)
 	    {
 		    _db = db;
 	    }
@@ -20,15 +21,16 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var models = _db.PokerUsers.OrderBy(m => m.Id).Take(10).ToList();
+            var models = _db.People.OrderBy(m => m.Id).Take(10).ToList();
             if(models != null)
             {
-                List<UserVM> viewModels = new List<UserVM>();
-                foreach( var model in models)
-                {
-                    viewModels.Add(new UserVM(model.UserName,model.NickName,model.Session));
-                }
-                return new ObjectResult(viewModels);
+                return new ObjectResult(models);
+                // List<Person> viewModels = new List<Person>();
+                // foreach( var model in models)
+                // {
+                //     viewModels.Add(new Person(model.UserName,model.NickName,model.Session));
+                // }
+                // return new ObjectResult(viewModels);
             }
             return NotFound();
         }
@@ -37,27 +39,33 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-			var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
+            //
+            //SELECT
+            //
+            var model = _db.People.Where(m => m.Id == id).Select(m => new {m.UserName,m.PassWord});
+            // Console.WriteLine(_db.People.Where(m => m.Id == id).Select(m => new {m.UserName,m.PassWord}).ToString());
+
+			// var model = _db.People.FirstOrDefault(m => m.Id == id);
 			if (model != null)
 			{
-				return new ObjectResult(new UserVM(model.UserName,model.NickName,model.Session));
+				return new ObjectResult(model);
 			}
 			return NotFound();
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] User body)
+        public IActionResult Post([FromBody] Person body)
         {
-	        _db.PokerUsers.Add(body);
+	        _db.People.Add(body);
 	        _db.SaveChanges();
 			return new ObjectResult(body);
         }
 
-        // PUT api/sync/5
+        // // PUT api/sync/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] User body)
+        public IActionResult Put(int id, [FromBody] Person body)
         {
-			var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
+			var model = _db.People.FirstOrDefault(m => m.Id == id);
 			if (model != null)
 			{
 				model.PassWord = body.PassWord;
@@ -67,20 +75,19 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
 			return NotFound();
         }
 
-        // DELETE api/sync/5
+        // // DELETE api/sync/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-
-            var model = _db.PokerUsers.FirstOrDefault(m => m.Id == id);
+            var model = _db.People.FirstOrDefault(m => m.Id == id);
             if (model != null)
             {
-                var wallets = _db.Wallets.OrderByDescending(m => m.User.Id == id);
+                var wallets = _db.Wallets.OrderByDescending(m => m.PersonId == id);
                 foreach(var wallet in wallets)
                 {
                     _db.Wallets.Remove(wallet);
                 }
-                _db.PokerUsers.Remove(model);
+                _db.People.Remove(model);
                 _db.SaveChanges();
                 return Ok();
             }

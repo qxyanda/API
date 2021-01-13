@@ -1,20 +1,19 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Models
 {
     public class Wallet
     {
+        public int PersonId { get; set; }
+        [Key]
         public int Id { get; set; }
-        public string address { get; set; }
-        public int balance { get; set; }
-        public int decimals { get; set; }
-        public int onDeposite { get; set; }
-        public int onWithdraw { get; set; }
-        public int isDepdited { get; set; }
-        public int isWthdrawed { get; set; }
-
-        public User User { get; set; }
+        public int Type { get; set; }
+        public string Address { get; set; }
+        public int Balance { get; set; }
+        public int Decimals { get; set; }
+        public List<WalletHistory> walletHistory { get; set; }
     }
 }
