@@ -22,6 +22,18 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
         public IActionResult Get()
         {
             var models = _db.People.OrderBy(m => m.Id).Take(10).ToList();
+
+            //等效
+
+            // var sqls =
+            // (
+            //     from m in _db.People
+            //     orderby m.Id
+            //     select m
+            // ).Take(10);
+
+            // var models = sqls.ToList();
+
             if(models != null)
             {
                 return new ObjectResult(models);
@@ -43,9 +55,20 @@ namespace Pomelo.EntityFrameworkCore.MySql.IntegrationTests.Controllers
             //SELECT
             //
             var model = _db.People.Where(m => m.Id == id).Select(m => new {m.UserName,m.PassWord});
+
             // Console.WriteLine(_db.People.Where(m => m.Id == id).Select(m => new {m.UserName,m.PassWord}).ToString());
 
 			// var model = _db.People.FirstOrDefault(m => m.Id == id);
+
+            // var sqls =
+            // (
+            //     from m in _db.People
+            //     where m.Id == id
+            //     select new {m.UserName,m.PassWord}
+            // );
+
+            // var model = sqls;
+
 			if (model != null)
 			{
 				return new ObjectResult(model);
